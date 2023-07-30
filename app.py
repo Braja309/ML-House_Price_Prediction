@@ -4,7 +4,7 @@ app=Flask(__name__)
 
 @app.route("/",methods=['GET','POST'])
 def index():
-    return "starting house price prediction project"
+    return "ci cd format"
 
 
 if __name__=="__main__":
