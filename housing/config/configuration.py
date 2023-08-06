@@ -20,7 +20,6 @@ class Configuration:
     def get_data_ingestion_config(self) -> DataIngestionConfig:
         try:
             artifact_dir = self.training_pipeline_config.artifact_dir
-            logging.info(f"{artifact_dir}")
             data_ingestion_artifact_dir = os.path.join(
                 artifact_dir,
                 DATA_INGESTION_ARTIFACT_DIR,
@@ -43,7 +42,6 @@ class Configuration:
             ingested_test_dir= os.path.join(
                 ingested_data_dir,data_ingestion_info[DATA_INGESTION_TEST_DIR_KEY]
             )
-
             data_ingestion_config = DataIngestionConfig(
                 dataset_download_url=dataset_download_url,
                 tgz_download_url=tgz_download_url,
